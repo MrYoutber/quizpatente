@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz per la patente CINA</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+        body {
+            background: rgb(48, 47, 47);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .container {
+            width: fit-content; height: fit-content;
+            padding-top: 20px; padding-bottom: 20px; padding-left: 40px; padding-right: 40px;
+            border-radius: 30px;
+            margin-top: 100px;
+            background: white;
+            color: black;
+            display: grid;
+            place-items: center;
+        }
+
+        .cesko {
+            width: 128px; height: 128px;
+        }
+
+        .containerDomande {
+            display: grid;
+            place-items: center;
+        }
+
+        .domanda {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            width: 600px;
+        }
+
+        select{
+            height: 44px;
+            border: none;
+            overflow: hidden;
+        }
+        select::-moz-focus-inner {
+            border: 0;
+        }
+        select:focus {
+            outline: none;
+        }
+        select:not(:focus) option:checked {
+            background: rgb(25, 103, 210);
+            color: white;
+        }
+        select option:checked {
+            background: rgb(25, 103, 210);
+        }
+        select option{
+            width: 50px; height: 40px;
+            vertical-align: middle;
+            display: inline-flex;
+            cursor: pointer;
+            border:rgb(195, 191, 191) 2px solid;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .immagineDomanda {
+            width: 150px; height: 150px;
+        }
+
+        .controllaRisposte {
+            width: 100px; height: 50px;
+            font-size: 30px;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Benvenuto al QUIZ per la patente AM13DFHG5483!</h1>
+        <p>In questo quiz dovrai rispondere a 30 domande, se fai 3 errori o meno ricevi la patente, altrimenti fai la sua fine:</p>
+        <img src="cesko.png" class="cesko">
+        <h1>Ma prima di tutto</h1>
+        <h2>Le regole</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Cum, distinctio? Aspernatur odio eligendi debitis. <br>Iusto dicta eaque voluptatibus rem, veritatis voluptas, <br>quis error pariatur tenetur dolores necessitatibus veniam minus placeat. <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Cum, distinctio? Aspernatur odio eligendi debitis. <br>Iusto dicta eaque voluptatibus rem, veritatis voluptas, <br>quis error pariatur tenetur dolores necessitatibus veniam minus placeat. <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Cum, distinctio? Aspernatur odio eligendi debitis. <br>Iusto dicta eaque voluptatibus rem, veritatis voluptas, <br>quis error pariatur tenetur dolores necessitatibus veniam minus placeat. <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Cum, distinctio? Aspernatur odio eligendi debitis. <br>Iusto dicta eaque voluptatibus rem, veritatis voluptas, <br>quis error pariatur tenetur dolores necessitatibus veniam minus placeat.</p>
+        <p>Ti starai chiedendo perche' le regole sono tanti lorem ipsum? Perche tanto chi se le incula le regole :)</p>
+        <h2>L'unica cosa da ricordarti è che se le domande <br>hanno un'immagine che devi guardare, viene prima raffigurata <br>l'immagine e poi la domanda. Segui questo esempio:</h2>
+        <img src="esempioDomanda.png" style="border: black 2px solid;">
+
+
+        <h2 style="margin-top: 150px;">Iniziamo con il quiz: </h2>
+        <div class="containerDomande">
+            <div class="domanda" id="domanda1">
+                <div class="text">
+                    <p>1) Conducendo un ciclomotore è obbligatorio fermarsi in caso di pioggia</p>
+                </div>
+                <select name="vero_falso" id="vero_falso1" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda2">
+                <div class="text">
+                    <p>2) Su strada a doppio senso di marcia a due corsie, i ciclomotori devono marciare il più possibile vicino al margine
+                        destro della strada quando incrociano altri veicoli</p>
+                </div>
+                <select name="vero_falso" id="vero_falso2" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda3">
+                <div class="text">
+                    <p>3) Se altri utenti della strada non ci danno la precedenza, in caso d’incidente la responsabilità sarà sempre e solo
+                        del veicolo che non ha dato la precedenza</p>
+                </div>
+                <select name="vero_falso" id="vero_falso3" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda4.png" class="immagineDomanda">
+            <div class="domanda" id="domanda4">
+                <div class="text">
+                    <p>4) In presenza del segnale raffigurato è necessario fermarsi se è in funzione il segnale acustico</p>
+                </div>
+                <select name="vero_falso" id="vero_falso4" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda5.png" class="immagineDomanda">
+            <div class="domanda" id="domanda5">
+                <div class="text">
+                    <p>5) In presenza del segnale raffigurato è vietata la marcia sopra i binari del tram</p>
+                </div>
+                <select name="vero_falso" id="vero_falso5" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda6.png" class="immagineDomanda">
+            <div class="domanda" id="domanda6">
+                <div class="text">
+                    <p> 6) Ciascuno dei pannelli integrativi raffigurati indica l'inizio della prescrizione specificata dal segnale,
+                        precisandone l'estensione
+                       </p>
+                </div>
+                <select name="vero_falso" id="vero_falso6" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda7.png" class="immagineDomanda">
+            <div class="domanda" id="domanda7">
+                <div class="text">
+                    <p>7) Nell'incrocio raffigurato il veicolo T passa prima del veicolo R</p>
+                </div>
+                <select name="vero_falso" id="vero_falso7" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda8">
+                <div class="text">
+                    <p>8) La svolta a destra si effettua tenendosi il più vicino possibile al margine destro della strada</p>
+                </div>
+                <select name="vero_falso" id="vero_falso8" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda9">
+                <div class="text">
+                    <p>9) In caso di pioggia occorre manovrare con prudenza il manubrio</p>
+                </div>
+                <select name="vero_falso" id="vero_falso9" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda10">
+                <div class="text">
+                    <p>10) Per garantire la sicurezza della circolazione ed evitare incidenti è necessario, fra l'altro affiancare un altro
+                        ciclomotore per parlare con il conducente</p>
+                </div>
+                <select name="vero_falso" id="vero_falso10" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda11">
+                <div class="text">
+                    <p>11) I conducenti di ciclomotori possono procedere sollevando la ruota anteriore durante il sorpasso</p>
+                </div>
+                <select name="vero_falso" id="vero_falso11" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda12.png" class="immagineDomanda">
+            <div class="domanda" id="domanda12">
+                <div class="text">
+                    <p>12) Il segnale raffigurato preavvisa un tratto di strada con pavimentazione irregolare</p>
+                </div>
+                <select name="vero_falso" id="vero_falso12" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda13.png" class="immagineDomanda">
+            <div class="domanda" id="domanda13">
+                <div class="text">
+                    <p>13) Il segnale raffigurato segnala che nelle ore indicate vale il DIVIETO DI SOSTA per i veicoli rappresentati in
+                        figura
+                       </p>
+                </div>
+                <select name="vero_falso" id="vero_falso13" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda14.png" class="immagineDomanda">
+            <div class="domanda" id="domanda14">
+                <div class="text">
+                    <p>14) Il segnale raffigurato obbliga i veicoli a motore a disporsi in un'unica fila</p>
+                </div>
+                <select name="vero_falso" id="vero_falso14" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda15.png" alt="" class="immagineDomanda">
+            <div class="domanda" id="domanda15">
+                <div class="text">
+                    <p>15) Dovendo attraversare l'incrocio raffigurato, i veicoli A e S passano contemporaneamente dopo il passaggio del
+                        veicolo T</p>
+                </div>
+                <select name="vero_falso" id="vero_falso15" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda16">
+                <div class="text">
+                    <p>16) La fermata del veicolo è sempre vietata in tutti i luoghi dove sia di intralcio alla circolazione</p>
+                </div>
+                <select name="vero_falso" id="vero_falso16" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda17">
+                <div class="text">
+                    <p>17) Di notte, incrociando un veicolo con fari a luce abbagliante accesi, occorre procedere a nostra volta con i fari
+                        abbaglianti, onde vedere bene la strada</p>
+                </div>
+                <select name="vero_falso" id="vero_falso17" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda18">
+                <div class="text">
+                    <p>18) Si deve utilizzare un casco che si indossa perfettamente</p>
+                </div>
+                <select name="vero_falso" id="vero_falso18" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda19">
+                <div class="text">
+                    <p>19) Il conducente del ciclomotore non deve usare il casco se soffre di claustrofobia</p>
+                </div>
+                <select name="vero_falso" id="vero_falso19" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda20.png" alt="" class="immagineDomanda">
+            <div class="domanda" id="domanda20">
+                <div class="text">
+                    <p>20) Il segnale raffigurato obbliga ad arrestarsi per dare la precedenza solo ai veicoli provenienti da destra</p>
+                </div>
+                <select name="vero_falso" id="vero_falso20" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda21.png" alt="" class="immagineDomanda">
+            <div class="domanda" id="domanda21">
+                <div class="text">
+                    <p>21) Secondo le norme di precedenza, nell'incrocio raffigurato il veicolo N dà la precedenza al veicolo E</p>
+                </div>
+                <select name="vero_falso" id="vero_falso21" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda22">
+                <div class="text">
+                    <p>22) Il sorpasso a destra è permesso quando il conducente da sorpassare ha segnalato che intende svoltare a sinistra</p>
+                </div>
+                <select name="vero_falso" id="vero_falso22" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda23">
+                <div class="text">
+                    <p>23) Il marciapiede è una parte della strada riservata ai pedoni e anche ai veicoli in sosta se ci sono strisce di
+                        parcheggio
+                       </p>
+                </div>
+                <select name="vero_falso" id="vero_falso23" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda24">
+                <div class="text">
+                    <p>24) I catadiottri sono dispositivi che riflettono la luce e hanno la funzione di sostituire gli indicatori di direzione
+                        se questi non funzionano
+                       </p>
+                </div>
+                <select name="vero_falso" id="vero_falso24" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda25">
+                <div class="text">
+                    <p>25) E' sempre vietato sostare con i ciclomotori lungo il margine sinistro delle strade a senso unico</p>
+                </div>
+                <select name="vero_falso" id="vero_falso25" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda26">
+                <div class="text">
+                    <p>26) La sonnolenza migliora il controllo del ciclomotore</p>
+                </div>
+                <select name="vero_falso" id="vero_falso26" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda27.png" alt="" class="immagineDomanda">
+            <div class="domanda" id="domanda27">
+                <div class="text">
+                    <p>27) Il segnale raffigurato è un divieto di transito ai pedoni</p>
+                </div>
+                <select name="vero_falso" id="vero_falso27" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <img src="domanda28.png" alt="" class="immagineDomanda">
+            <div class="domanda" id="domanda28">
+                <div class="text">
+                    <p>28) Con la segnaletica orizzontale raffigurata, solo la corsia C permette di effettuare la svolta a destra</p>
+                </div>
+                <select name="vero_falso" id="vero_falso28" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda29">
+                <div class="text">
+                    <p>29) E' vietato il sorpasso nei centri abitati</p>
+                </div>
+                <select name="vero_falso" id="vero_falso29" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+
+            <div class="domanda" id="domanda30">
+                <div class="text">
+                    <p>30) La fermata è vietata all'entrata e all'uscita delle piste ciclabili</p>
+                </div>
+                <select name="vero_falso" id="vero_falso30" multiple>
+                    <option value="1" style="margin-left: 15px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-right: rgb(195, 191, 191) 1px solid;">Vero</option>
+                    <option value="2" style="border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-left: rgb(195, 191, 191) 1px solid;">Falso</option>
+                  </select>
+            </div>
+            
+            <button class="controllaRisposte" id="controllaRisposte">Invia</button>
+            
+            <div id="visualizzaRisposte" style="display: none;">
+                <p id="esito">Esito: Positivo</p>
+                <p id="risposteGiusteMostra">Risposte Giuste: 0</p>
+                <p id="risposteSbagliateCountMostra">Risposte Sbagliate: 0</p>
+                <p>Domande a cui hai sbagliato:</p>
+                <p id="risposteSbagliateMostra"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var domanda1 = document.getElementById("vero_falso1");
+        var domanda2 = document.getElementById("vero_falso2");
+        var domanda3 = document.getElementById("vero_falso3");
+        var domanda4 = document.getElementById("vero_falso4");
+        var domanda5 = document.getElementById("vero_falso5");
+        var domanda6 = document.getElementById("vero_falso6");
+        var domanda7 = document.getElementById("vero_falso7");
+        var domanda8 = document.getElementById("vero_falso8");
+        var domanda9 = document.getElementById("vero_falso9");
+        var domanda10 = document.getElementById("vero_falso10");
+        var domanda11 = document.getElementById("vero_falso11");
+        var domanda12 = document.getElementById("vero_falso12");
+        var domanda13 = document.getElementById("vero_falso13");
+        var domanda14 = document.getElementById("vero_falso14");
+        var domanda15 = document.getElementById("vero_falso15");
+        var domanda16 = document.getElementById("vero_falso16");
+        var domanda17 = document.getElementById("vero_falso17");
+        var domanda18 = document.getElementById("vero_falso18");
+        var domanda19 = document.getElementById("vero_falso19");
+        var domanda20 = document.getElementById("vero_falso20");
+        var domanda21 = document.getElementById("vero_falso21");
+        var domanda22 = document.getElementById("vero_falso22");
+        var domanda23 = document.getElementById("vero_falso23");
+        var domanda24 = document.getElementById("vero_falso24");
+        var domanda25 = document.getElementById("vero_falso25");
+        var domanda26 = document.getElementById("vero_falso26");
+        var domanda27 = document.getElementById("vero_falso27");
+        var domanda28 = document.getElementById("vero_falso28");
+        var domanda29 = document.getElementById("vero_falso29");
+        var domanda30 = document.getElementById("vero_falso30");
+
+        var risposteGiuste = 0;
+        var risposteSbagliate = [];
+        var risposteSbagliateCount = 0;
+
+        var visualizzaRisposte = document.getElementById("visualizzaRisposte");
+        var esito = document.getElementById("esito");
+        var risposteGiusteMostra = document.getElementById("risposteGiusteMostra");
+        var risposteSbagliateCountMostra = document.getElementById("risposteSbagliateCountMostra");
+        var risposteSbagliateMostra = document.getElementById("risposteSbagliateMostra");
+
+        var inviaBtn = document.getElementById("controllaRisposte");
+
+        inviaBtn.addEventListener("click", controllaRisposte);
+
+        function controllaRisposte() {
+            var risposta1 = domanda1.options[domanda1.selectedIndex].value;
+            var risposta2 = domanda2.options[domanda2.selectedIndex].value;
+            var risposta3 = domanda3.options[domanda3.selectedIndex].value;
+            var risposta4 = domanda4.options[domanda4.selectedIndex].value;
+            var risposta5 = domanda5.options[domanda5.selectedIndex].value;
+            var risposta6 = domanda6.options[domanda6.selectedIndex].value;
+            var risposta7 = domanda7.options[domanda7.selectedIndex].value;
+            var risposta8 = domanda8.options[domanda8.selectedIndex].value;
+            var risposta9 = domanda9.options[domanda9.selectedIndex].value;
+            var risposta10 = domanda10.options[domanda10.selectedIndex].value;
+            var risposta11 = domanda11.options[domanda11.selectedIndex].value;
+            var risposta12 = domanda12.options[domanda12.selectedIndex].value;
+            var risposta13 = domanda13.options[domanda13.selectedIndex].value;
+            var risposta14 = domanda14.options[domanda14.selectedIndex].value;
+            var risposta15 = domanda15.options[domanda15.selectedIndex].value;
+            var risposta16 = domanda16.options[domanda16.selectedIndex].value;
+            var risposta17 = domanda17.options[domanda17.selectedIndex].value;
+            var risposta18 = domanda18.options[domanda18.selectedIndex].value;
+            var risposta19 = domanda19.options[domanda19.selectedIndex].value;
+            var risposta20 = domanda20.options[domanda20.selectedIndex].value;
+            var risposta21 = domanda21.options[domanda21.selectedIndex].value;
+            var risposta22 = domanda22.options[domanda22.selectedIndex].value;
+            var risposta23 = domanda23.options[domanda23.selectedIndex].value;
+            var risposta24 = domanda24.options[domanda24.selectedIndex].value;
+            var risposta25 = domanda25.options[domanda25.selectedIndex].value;
+            var risposta26 = domanda26.options[domanda26.selectedIndex].value;
+            var risposta27 = domanda27.options[domanda27.selectedIndex].value;
+            var risposta28 = domanda28.options[domanda28.selectedIndex].value;
+            var risposta29 = domanda29.options[domanda29.selectedIndex].value;
+            var risposta30 = domanda30.options[domanda30.selectedIndex].value;
+
+
+            if (risposta1 == "1") {
+                risposteSbagliate.push("Domanda 1");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta1 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 1");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta2 == "2") {
+                risposteSbagliate.push("Domanda 2");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta2 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 2");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta3 == "1") {
+                risposteSbagliate.push("Domanda 3");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta3 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 3");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta4 == "2") {
+                risposteSbagliate.push("Domanda 4");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta4 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 4");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta5 == "1") {
+                risposteSbagliate.push("Domanda 5");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta5 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 5");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta6 == "2") {
+                risposteSbagliate.push("Domanda 6");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta6 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 6");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta7 == "1") {
+                risposteSbagliate.push("Domanda 7");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta7 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 7");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta8 == "2") {
+                risposteSbagliate.push("Domanda 8");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta8 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 8");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta9 == "2") {
+                risposteSbagliate.push("Domanda 9");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta9 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 9");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta10 == "1") {
+                risposteSbagliate.push("Domanda 10");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta10 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 10");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta11 == "1") {
+                risposteSbagliate.push("Domanda 11");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta11 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 11");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta12 == "2") {
+                risposteSbagliate.push("Domanda 12");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta12 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 12");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta13 == "1") {
+                risposteSbagliate.push("Domanda 13");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta13 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 13");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta14 == "1") {
+                risposteSbagliate.push("Domanda 14");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta14 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 14");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta15 == "1") {
+                risposteSbagliate.push("Domanda 15");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta15 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 15");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta16 == "2") {
+                risposteSbagliate.push("Domanda 16");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta16 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 16");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta17 == "1") {
+                risposteSbagliate.push("Domanda 17");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta17 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 17");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta18 == "2") {
+                risposteSbagliate.push("Domanda 18");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta18 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 18");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta19 == "1") {
+                risposteSbagliate.push("Domanda 19");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta19 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 19");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta20 == "1") {
+                risposteSbagliate.push("Domanda 20");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta20 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 20");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta21 == "2") {
+                risposteSbagliate.push("Domanda 21");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta21 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 21");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta22 == "2") {
+                risposteSbagliate.push("Domanda 22");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta22 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 22");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta23 == "2") {
+                risposteSbagliate.push("Domanda 23");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta23 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 23");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta24 == "1") {
+                risposteSbagliate.push("Domanda 24");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta24 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 24");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta25 == "1") {
+                risposteSbagliate.push("Domanda 25");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta25 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 25");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta26 == "1") {
+                risposteSbagliate.push("Domanda 26");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta26 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 26");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta27 == "1") {
+                risposteSbagliate.push("Domanda 27");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta27 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 27");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta28 == "2") {
+                risposteSbagliate.push("Domanda 28");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta28 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 28");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta29 == "1") {
+                risposteSbagliate.push("Domanda 29");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta29 == "2") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 29");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            if (risposta30 == "2") {
+                risposteSbagliate.push("Domanda 30");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            } else if (risposta30 == "1") {
+                risposteGiuste = risposteGiuste + 1;
+            } else {
+                risposteSbagliate.push("Domanda 30");
+                risposteSbagliateCount = risposteSbagliateCount + 1;
+            }
+
+            
+            
+
+
+
+
+            if (risposteSbagliateCount > 3) {
+                esito.innerHTML = "Esito: Negativo"
+            } else {
+                esito.innerHTML = "Esito: Positivo"
+            }
+            risposteGiusteMostra.innerHTML = "Risposte Giuste: " + risposteGiuste;
+            risposteSbagliateCountMostra.innerHTML = "Risposte Sbagliate: " + risposteSbagliateCount;
+            for(var i = 0; i < risposteSbagliate.length; i++) {
+                risposteSbagliateMostra.innerHTML += risposteSbagliate[i] + ", ";
+            }
+            visualizzaRisposte.style.display = "grid";
+        }
+    </script>
+</body>
+</html>
